@@ -28,6 +28,8 @@ Optimized version of the Minimax algorithm that avoids evaluating branches that 
 An exploration focused algorithm which runs random simulations to determine the statistically best move
 
 ## Project Structure
+
+```
 src/
 └── com/
     └── LicentaBTA/
@@ -82,7 +84,7 @@ src/
                     ChessBoardView.java           # UI for the chess board  
                     ChessGameView.java            # UI for chess gameplay  
                     MainMenuView.java             # UI for the main menu
-
+```
 
 ## Future Improvements
 
