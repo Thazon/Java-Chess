@@ -28,56 +28,57 @@ Optimized version of the Minimax algorithm that avoids evaluating branches that 
 An exploration focused algorithm which runs random simulations to determine the statistically best move
 
 ## Project Structure
+
 com.LicentaBTA.app.chess/
-├── Main.java                            # Entry point for the application
-├── AppManager.java                      # Initializes the main menu and displays it
-
+├── Main.java                       # Entry point for the application
+├── AppManager.java                 # Initializes the main menu and displays it
+│
 ├── controllers/
-│   ├── ChessController.java             # Handles the game logic
-│   └── MainMenuController.java          # Handles the main menu logic
-
+│   ├── ChessController.java        # Handles the game logic
+│   └── MainMenuController.java     # Handles the main menu logic
+│
 ├── enums/
-│   ├── AlgorithmType.java               # Stores the types of algorithms
-│   ├── PlayerColor.java                 # Stores the two player colors
-│   ├── PlayerType.java                  # Stores the types of players
-│   └── TileColor.java                   # Board color types and their hex codes
-
+│   ├── AlgorithmType.java          # Stores the types of Algorithms
+│   ├── PlayerColor.java            # Stores the two player colors
+│   ├── PlayerType.java             # Stores the types of players
+│   └── TileColor.java              # Board color types and their color hex codes
+│
 ├── models/
-│   ├── Bishop.java                      # Bishop piece model
-│   ├── ChessBoardModel.java             # Board model with cloning and data handling
-│   ├── King.java                        # King piece model
-│   ├── Knight.java                      # Knight piece model
-│   ├── Move.java                        # Stores move information
-│   ├── Pawn.java                        # Pawn piece model
-│   ├── Piece.java                       # Base class for all chess pieces
-│   ├── PieceFactory.java                # Factory class for creating pieces
-│   ├── PlayerModel.java                 # Player model (type + algorithm)
-│   ├── Queen.java                       # Queen piece model
-│   └── Rook.java                        # Rook piece model
-
+│   ├── Bishop.java                 # Bishop piece model
+│   ├── ChessBoardModel.java       # Board data model with cloning logic
+│   ├── King.java                   # King piece model
+│   ├── Knight.java                 # Knight piece model
+│   ├── Move.java                   # Stores move information
+│   ├── Pawn.java                   # Pawn piece model
+│   ├── Piece.java                  # Base class for all chess pieces
+│   ├── PieceFactory.java           # Factory to create chess pieces
+│   ├── PlayerModel.java            # Stores player type and algorithm (AI/human)
+│   ├── Queen.java                  # Queen piece model
+│   └── Rook.java                   # Rook piece model
+│
 ├── PC/
-│   ├── Algorithm.java                   # Interface for all AI algorithms
-│   ├── AlgorithmFactory.java            # Factory to create algorithm instances
-│   ├── AlphaBetaMinimax.java            # Alpha-Beta Pruning algorithm
-│   ├── MCTSNode.java                    # Node class for MCTS
-│   ├── Minimax.java                     # Minimax algorithm
-│   ├── MinimaxNode.java                 # Node structure used by Minimax
-│   ├── MonteCarloTreeSearch.java        # Monte Carlo Tree Search algorithm
-│   ├── MoveScore.java                   # Holds move and score pair
-│   ├── Negamax.java                     # Negamax algorithm
-│   └── RandomMoveAlgorithm.java         # Basic random move AI
-
+│   ├── Algorithm.java              # Interface for all AI algorithm classes
+│   ├── AlgorithmFactory.java       # Factory for algorithm instantiation
+│   ├── AlphaBetaMinimax.java       # Minimax with alpha-beta pruning
+│   ├── Minimax.java                # Standard Minimax algorithm
+│   ├── MinimaxNode.java            # Node structure for Minimax
+│   ├── Negamax.java                # Negamax variant of Minimax
+│   ├── MonteCarloTreeSearch.java   # Monte Carlo Tree Search implementation
+│   ├── MCTSNode.java               # Node structure for MCTS
+│   ├── RandomMoveAlgorithm.java    # AI that picks a random legal move
+│   └── MoveScore.java              # Utility to pair a move with its score
+│
 ├── utils/
-│   ├── BoardUtils.java                  # Common board operations
-│   ├── DebugUtils.java                  # Debug tools for board inspection
-│   ├── MoveGenerator.java               # Move generation logic
-│   ├── MoveHistory.java                 # Redo/undo move history tracker
-│   └── ScoreUtils.java                  # Heuristic scoring utilities
-
-├── views/
-│   ├── ChessBoardView.java              # Renders the chess board
-│   ├── ChessGameView.java               # Manages chess game GUI
-│   └── MainMenuView.java                # GUI for the main menu
+│   ├── BoardUtils.java             # General board utility functions
+│   ├── DebugUtils.java             # Debug board state visualizations
+│   ├── MoveGenerator.java          # Logic for generating legal chess moves
+│   ├── MoveHistory.java            # Move history for undo/redo
+│   └── ScoreUtils.java             # Heuristic evaluation functions
+│
+└── views/
+    ├── ChessBoardView.java         # Renders the visual chess board
+    ├── ChessGameView.java          # Sets up and manages the in-game UI
+    └── MainMenuView.java           # Layout and design of the main menu
 
 ## Future Improvements
 
