@@ -1,4 +1,4 @@
-#Java Chess Engine with Minimax, Alpha-Beta Pruning and MCTS
+# Java Chess Engine with Minimax, Alpha-Beta Pruning and MCTS
 
 A Java-based Chess engine that integrates multiple Artificial Intelligence algorithms.
 Designed for educational purposes as my bachelor's project.
